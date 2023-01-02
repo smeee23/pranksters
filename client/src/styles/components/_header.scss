@@ -1,0 +1,68 @@
+$baseclass: 'app-bar';
+
+.#{$baseclass} {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  height: 12 * $rem-base;
+
+  background: linear-gradient(180deg, $brand-black 60%, transparent);
+
+  h2, h3, h4, h5, h6 {
+    height: 1.25 * $rem-base;
+  }
+
+  .logo {
+    margin-right: 1 * $rem-base;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  .#{$baseclass}__items {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    > * {
+      .button {
+        margin-left: 0;
+      }
+    }
+  }
+
+  a {
+    &:nth-child(1).active .button__bar--inner {
+      background: $brand-black;
+    }
+
+    &:nth-child(2).active .button__bar--inner {
+      background: $brand-black;
+    }
+
+    &:nth-child(3).active .button__bar--inner {
+      background: $brand-black;
+    }
+
+    &:nth-child(4).active .button__bar--inner {
+      background: $brand-black;
+    }
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    .#{$baseclass}__items > a {
+      display: none;
+    }
+  }
+}
