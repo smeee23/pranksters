@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.3fd16072.chunk.css",
+    "main.js": "./static/js/main.0449ff7b.chunk.js",
+    "main.js.map": "./static/js/main.0449ff7b.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8d6e6c54.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8d6e6c54.js.map",
+    "static/js/2.19a870f3.chunk.js": "./static/js/2.19a870f3.chunk.js",
+    "static/js/2.19a870f3.chunk.js.map": "./static/js/2.19a870f3.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.cf6535fb691f2de7710e1d0931a90653.js": "./precache-manifest.cf6535fb691f2de7710e1d0931a90653.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.3fd16072.chunk.css.map": "./static/css/main.3fd16072.chunk.css.map",
+    "static/media/dubsportz_black.png": "./static/media/dubsportz_black.cead6815.png",
+    "static/media/dubsportz_blue.png": "./static/media/dubsportz_blue.1e5f745f.png",
+    "static/media/styles.scss": "./static/media/grass.651dc708.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d6e6c54.js",
+    "static/js/2.19a870f3.chunk.js",
+    "static/css/main.3fd16072.chunk.css",
+    "static/js/main.0449ff7b.chunk.js"
+  ]
+}
