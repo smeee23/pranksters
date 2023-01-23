@@ -22,8 +22,8 @@ class Shapes extends Component {
         });
 
         const palette = {
-            //brandWhite: '#FFFFFF',
-            brandGrey: '#A8A8A8',
+            brandWhite: '#FFFFFF',
+            //brandGrey: '#A8A8A8',
             //brandYellow: '#4B0082',
             //brandGreen: '#80CE32',
             //brandRed: '#CE3232',

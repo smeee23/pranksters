@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom'
 import Takeover from "./Takeover";
 
 class LinkSocial extends Component {
+
 	render() {
     const { isMobile } = this.props;
 

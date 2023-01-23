@@ -3,12 +3,11 @@ import { Fragment } from "react";
 
 import { connect } from "react-redux";
 
-import { ButtonExtraSmall } from '../components/Button'
+import { ButtonSmall, ButtonLarge, Button } from '../components/Button'
 import Footer from "../components/Footer";
 import Shapes from '../components/Shapes';
 import TextLink from '../components/TextLink';
-
-import { updateDaiAddress } from "../actions/daiAddress";
+import { Client } from 'espn-fantasy-football-api';
 
 class Homepage extends Component {
 	componentDidMount() {
@@ -16,26 +15,27 @@ class Homepage extends Component {
 	}
 
 	render() {
+		const myClient = new Client({ leagueId: 432132 });
+		console.log("client", myClient);
 		return (
 			<Fragment>
 				<Shapes/>
 				<article>
 					<section className="page-section page-section--center horizontal-padding">
-					<div style={{display:"flex", flexDirection: "wrap", marginBottom: "400px"}}>
-						<div style={{display:"flex", flexDirection: "column", textAlign:"left", alignItems:"left", justifyContent:"left"}}>
-							<img style={{height:"350px", width: "350px", positition:"absolute"}} src={require("../components/images/0xfoobar_plain_lg.png")} alt={"logo"}/>
-						</div>
-						<div style={{ display:"flex", flexDirection: "column", textAlign:"left", alignItems:"left", justifyContent:"bottom"}}>
-
-							<h3 style={{marginBottom: "0", fontSize:80}}>Smart</h3>
-							<h3 style={{marginBottom: "0", fontSize:80}}>Contract</h3>
-							<div style={{marginBottom: "32", display:"flex", flexDirection: "wrap"}}>
-								<h3 style={{alignSelf:"flex-end", fontSize:80}} >Audits</h3>
-								<h3 style={{marginTop: "auto", paddingBottom:"15px", alignSelf:"flex-end", marginLeft:"15px", fontSize:17}} >by 0xfoobar</h3>
+					<div style={{display:"flex", flexDirection: "wrap", marginBottom: "400px", paddingLeft: "20px", gap:"8px"}}>
+						<div style={{ display:"flex", position: "relative", left: "0px", width: "400px", flexDirection: "column", textAlign:"left", alignItems:"left", justifyContent:"bottom"}}>
+							<h3 style={{marginBottom: "-32px", fontSize:120}}>DubSportz</h3>
+							<div style={{marginLeft: "-32px", marginBottom: "32", display:"flex", flexDirection: "wrap", gap:"8px"}}>
+								<h3 style={{fontSize:160}} >LEAGUES</h3>
+								<h3 style={{marginTop: "auto", paddingBottom:"20px", alignSelf:"flex-end", marginLeft:"2px", fontSize:17}} >by DubSportz</h3>
 							</div>
-							<p style={{marginBottom: "15px", fontSize:13, fontStyle: "italic"}} className="mr">Setting the standard for blockchain security. Our audit portfolio spans non-fungible tokens, distributed payment networks, financial structures, and governance systems.</p>
-							<div style={{ fontSize:13 }}  title={"request an audit"} >
-								<ButtonExtraSmall text={"Request an audit"} callback={() => {}}/>
+								<p style={{marginLeft:"16px", fontSize:17, fontStyle: "italic"}} className="mr">The premier destination for onchain fantasy sports.</p>
+								<div style={{marginRight: "auto", marginLeft: "auto"}}><ButtonSmall text="Launch App"/></div>						
+						</div>
+						<div style={{marginTop:"-64px", marginLeft: "-32px", display:"flex", flexDirection: "column", textAlign:"left", alignItems:"left", justifyContent:"left"}}>
+							<div className="cf">
+								<img style={{height:"500px", width: "600px", positition:"absolute"}} src={require("../../images/dubsportz_black.png")} alt={"logo"}/>
+								<img className="top" style={{height:"500px", width: "600px", positition:"absolute"}} src={require("../../images/dubsportz_blue.png")} alt={"logo"}/>
 							</div>
 						</div>
 					</div>
@@ -62,7 +62,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-	updateDaiAddress: (s) => dispatch(updateDaiAddress(s)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Homepage)

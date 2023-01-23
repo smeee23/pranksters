@@ -12,4 +12,4 @@ class LinkedIn extends Component {
 	}
 }
 
-export default LinkedIn 
+export default LinkedIn

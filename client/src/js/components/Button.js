@@ -11,8 +11,9 @@ import Discord from "./logos/Discord";
 import Facebook from "./logos/Facebook";
 import LinkedIn from "./logos/LinkedIn";
 import Share from "./logos/Share";
-import Copy from "./logos/Copy";
 import Shield from "./logos/Shield";
+import Copy from "./logos/Copy";
+import CopyCheck from "./logos/CopyCheck";
 import CopyWhite from "./logos/CopyWhite";
 import CopyWhiteCheck from "./logos/CopyWhiteCheck";
 import Close from "./logos/Close";
@@ -50,6 +51,52 @@ class ButtonExtraSmall extends Component {
           ) : null }
           { icon ? (
             <div className="button__itemxsm button__icon">
+              <Icon name={icon} size={lg ? 64 : 32}/>
+            </div>
+          ) : null }
+          { tweet ? (
+              <TwitterLight/>
+          ) : null }
+          { github ? (
+              <Github/>
+          ) : null }
+        </div>
+        {this.displayLine(tweet, github)}
+      </button>
+		);
+	}
+}
+
+class ButtonLarge extends Component {
+
+  displayLine = (tweet, github) => {
+    if(!tweet && ! github){
+      return  <div className="button__bar--outer">
+                <div className="button__bar--inner"/>
+              </div>
+    }
+  }
+	render() {
+		const { text, icon, tweet, href, callback, disabled, lg, logo, github, info } = this.props;
+
+    const classnames = classNames({
+      "button": true,
+      "button--icon-only": !text,
+      "button--lg": lg,
+      "button--disabled": disabled,
+    })
+
+		return (
+      <button title={info} className={classnames} href={href} onClick={callback}>
+        <div className="button__items">
+          { text ? (
+            <div className="button__itemlg button__text">
+              {logo}
+              <p className="mb0">{ text }</p>
+            </div>
+          ) : null }
+          { icon ? (
+            <div className="button__itemlg button__icon">
               <Icon name={icon} size={lg ? 64 : 32}/>
             </div>
           ) : null }
@@ -169,8 +216,8 @@ class Button extends Component {
           { isLogo === "copyPaste" ? (
               <Copy/>
           ) : null }
-          { isLogo === "shield" ? (
-              <Shield/>
+          { isLogo === "copyPaste_check" ? (
+              <CopyCheck/>
           ) : null }
           { isLogo === "copy_white" ? (
               <CopyWhite/>
@@ -190,6 +237,9 @@ class Button extends Component {
           { isLogo === "refresh_pending" ? (
               <RefreshPending/>
           ) : null }
+          { isLogo === "shield" ? (
+              <Shield/>
+          ) : null }
         </div>
         {this.displayLine(isLogo)}
       </button>
@@ -197,4 +247,4 @@ class Button extends Component {
 	}
 }
 
-export { Button, ButtonSmall, ButtonExtraSmall }
+export { Button, ButtonSmall, ButtonExtraSmall, ButtonLarge }

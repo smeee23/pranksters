@@ -1,4 +1,4 @@
-$font-headings: 'Rubik Bubbles', sans-serif;
+$font-headings: 'East Sea Dokdo', sans-serif;
 $font-body: 'Roboto Mono', sans-serif;
 
 $base-font-size: px-to-rem(13px);
@@ -10,6 +10,17 @@ body, button, input, select, textarea {
 	text-rendering: optimizeSpeed;
 	font-family: $font-body;
 	font-size: $base-font-size;
+}
+
+
+body, input, select, textarea {
+
+	font-family: $font-body;
+}
+
+button {
+	font-family: $font-headings;
+	font-size: 32px;
 }
 
 h1, h2, h3, h4, h5, h6, blockquote, p {

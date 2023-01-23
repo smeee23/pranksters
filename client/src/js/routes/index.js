@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router'
 
 import Homepage from './Homepage'
-import Audits from './Audits'
+import Mint from './Mint'
 
 import Header from '../components/Header'
 import LinkSocial from '../components/LinkSocial'
@@ -11,7 +11,7 @@ const routes = (
 	<main>
 		<Switch>
 			<Route exact path={"/"} component={Homepage}/>
-			<Route exact path={"/audits"} component={Audits}/>
+			<Route exact path={"/mint"} component={Mint}/>
 		</Switch>
 		<Header/>
 		<LinkSocial/>
