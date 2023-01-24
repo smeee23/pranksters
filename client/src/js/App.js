@@ -51,8 +51,6 @@ class App extends Component {
 	componentDidMount = async() => {
 		try {
 			window.addEventListener('resize', this.props.detectMobile);
-
-			console.log('data', getPlayerDataFromEspn())
 		}
 		catch (error) {
 			// Catch any errors for any of the above operations.
