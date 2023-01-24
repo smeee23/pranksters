@@ -6,6 +6,7 @@ $white-theme-baseclass: "theme--white";
 
 html {
 	background: $brand-white;
+	background-image: url(../images/grass.jpeg);
 }
 
 
@@ -71,7 +72,8 @@ iframe {
 
 *::-webkit-scrollbar {
 	width: 0px;
-	background: transparent; 
+	background: transparent;
+	background-image: url(../images/grass.jpeg); 
 }
 
 .disabled {

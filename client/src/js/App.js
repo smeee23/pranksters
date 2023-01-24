@@ -10,8 +10,6 @@ import { createHashHistory} from 'history'
 import routes from './routes'
 import { detectMobile } from "./actions/mobile"
 
-import { getPlayerDataFromEspn } from "./func/priceFeeds";
-
 //import { load } from "dotenv";
 
 const providerOptions = {

@@ -218,6 +218,18 @@ class Mint extends Component {
 							</div>
 						</div>
 					</section>
+
+					<section className="page-section horizontal-padding">
+						<h3 style={{marginTop: "400px", marginBottom: "5px", fontSize:80}}>Our Process</h3>
+						<div className="grid">
+							<div className="grid__item--col-6 grid__item--col-12-medium">
+								<p style={{ fontSize:21 }} className="mr">Our proprietary security review verifies that your distributed systems and contracts work as intended. Our engineers fully review your system’s architecture and codebase, and then write a thorough report that includes actionable feedback for every issue found.</p>
+							</div>
+							<div className="grid__item--col-6 grid__item--col-12-medium">
+								<p  style={{ fontSize:21 }} className="mr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+						</div>
+					</section>
 					
 				</article>
 			</Fragment>
