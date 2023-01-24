@@ -7,7 +7,6 @@ import { ButtonSmall, ButtonLarge, Button } from '../components/Button'
 import Footer from "../components/Footer";
 import Shapes from '../components/Shapes';
 import TextLink from '../components/TextLink';
-import { Client } from 'espn-fantasy-football-api';
 
 class Homepage extends Component {
 	componentDidMount() {
@@ -15,8 +14,6 @@ class Homepage extends Component {
 	}
 
 	render() {
-		const myClient = new Client({ leagueId: 432132 });
-		console.log("client", myClient);
 		return (
 			<Fragment>
 				<Shapes/>
@@ -25,10 +22,10 @@ class Homepage extends Component {
 						<div style={{ display:"flex", position: "relative", left: "0px", width: "600px", flexDirection: "column", textAlign:"center", alignItems:"center", justifyContent:"center"}}>
 							<h3 style={{marginBottom: "-32px", fontSize:120}}>DubSportz</h3>
 							<h3 style={{fontSize:160}} >LEAGUES</h3>
-							<div style={{display: "flex", flexDirection: "wrap", width: "900px"}}>
-								<h3 style={{fontSize:32, marginLeft: "200px"}} className="mr">premier destination for onchain fantasy sports</h3>
-								<div style={{marginRight: "auto"}}><ButtonSmall text="Launch App"/></div>		
-							</div>				
+							<h3 style={{fontSize:32, marginRight: "0px"}} className="mr">premier destination for onchain fantasy sports</h3>
+							<div style={{alignItems:"center", justifyContent:"center"}}>
+								<ButtonSmall text="Launch App"/>
+							</div>					
 						</div>
 						<div style={{marginTop:"-64px", marginLeft: "-124px", display:"flex", flexDirection: "column", textAlign:"left", alignItems:"left", justifyContent:"left"}}>
 							<div className="cf">
