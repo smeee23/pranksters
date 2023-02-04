@@ -20,7 +20,7 @@ import UsdcLogo from "../components/cryptoLogos/UsdcLogo"
 
 import { ButtonExtraSmall } from '../components/Button';
 
-class Mint extends Component {
+class Lobby extends Component {
 	constructor(props) {
 		super(props);
 
@@ -178,49 +178,25 @@ class Mint extends Component {
 			<Fragment>
                 <Shapes/>
 				<article>
-                        <h1 style={{display:"flex", fontSize: 52, paddingTop:"150px", marginBottom:"-20px", alignItems:"center", justifyContent:"center"}} >Mint STICKIES</h1>
+                        <h1 style={{display:"flex", fontSize: 52, paddingTop:"150px", marginBottom:"-20px", alignItems:"center", justifyContent:"center"}} >FEATURED EVENTS</h1>
 						<div style={{display:"flex", gap:"800px",  alignItems:"center", justifyContent:"center"}}>
 							{optionButtons}
 						</div>
                         <div style={{display:"grid", gap:"16px", gridColumn: "3", gridRow: "3", paddingTop:"16px", paddingLeft:"50px", paddingRight:"50px", marginBottom:"5px",  alignItems:"center", justifyContent:"center"}}>
                             <div style={{gridColumn: 1}}>
-                                <Card title={"USDC Circle"} description={"Token and Token Distributor Audit"}/>
+                                <Card title={"DubSportz NFL Sunday Classic"} cost={"1"} numberEntrants={"1001"} tokensAccepted={["ETH"]} begins={0} style={0}/>
                             </div>
                             <div style={{gridColumn: 2}}>
-                                <Card title={"AAVE"} description={"Comprehensive Protocol Audit V3"}/>
+                                <Card title={"NFL Classic"} cost={"1"} numberEntrants={"1001"} tokensAccepted={["USDC", "USDT", "DAI"]} begins={4} style={0}/>
                             </div>
                             <div style={{gridColumn: 3}}>
-                                <Card title={"JustCause"} description={"JustCause Security Audit"}/>
-                            </div>
-                            <div style={{gridColumn: 1}}>
-                                <Card title={"Chainlink Labs"} description={"VRF Security Audit"}/>
-                            </div>
-                            <div style={{gridColumn: 2}}>
-                                <Card title={"NotGonnaMakeIt"} description={"Security Audit and Formal Verification"}/>
-                            </div>
-                            <div style={{gridColumn: 3}}>
-                                <Card title={"CharityBlocks"} description={"CharityBlocks Security Audit"}/>
+                                <Card title={"NFL Classic"} cost={"1"} numberEntrants={"1001"} tokensAccepted={["USDC", "USDT", "DAI"]} begins={0} style={0}/>
                             </div>
                         </div>
-						<div style={{marginTop:"150px",  alignItems:"center", justifyContent:"center"}}>
-							{this.getSlide()}
-						</div>
 					
-					
-					<section className="page-section horizontal-padding">
-						<h2 style={{margin:'auto', fontSize:50,  paddingBottom: "50px"}}>Why We Do It</h2>
-						<div style={{margin:'auto'}} className="grid">
-							<div className="grid__item--col-6 grid__item--col-12-medium">
-								<p className="mr">JustCause is an open source, permissionless and non-custodial protocol. This means that anyone has the freedom to create or contribute to pools with a user interface or interact directly with the smart contracts on the network. This freedom lies at the heart of the difference between permissioned (closed) and permissionless (open) systems.</p>
-							</div>
-							<div className="grid__item--col-6 grid__item--col-12-medium">
-								<p className="mr">Our mission is to give users the freedom to create and fund any cause they deem worthy. Crowdfunding mechanisms based on traditional financial payment networks are inherently permissioned and custodial. This leaves the funds and users of these systems vulnerable to financial censorship. We want to solve this problem.</p>
-							</div>
-						</div>
-					</section>
 
 					<section className="page-section horizontal-padding">
-						<h3 style={{marginTop: "400px", marginBottom: "5px", fontSize:80}}>Our Process</h3>
+						<h3 style={{marginBottom: "5px", fontSize:80}}>Our Process</h3>
 						<div className="grid">
 							<div className="grid__item--col-6 grid__item--col-12-medium">
 								<p style={{ fontSize:21 }} className="mr">Our proprietary security review verifies that your distributed systems and contracts work as intended. Our engineers fully review your system’s architecture and codebase, and then write a thorough report that includes actionable feedback for every issue found.</p>
@@ -246,4 +222,4 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Mint)
+export default connect(mapStateToProps, mapDispatchToProps)(Lobby)

@@ -1,7 +1,7 @@
-$baseclass: 'page-section';
+$baseclass: 'home-section';
 
 .#{$baseclass} {
-  @include verticalPadding(($rem-base * 10));
+  @include verticalPaddingHome(($rem-base * 10));
 	position: relative;
 	overflow: hidden;
 	height: auto;
@@ -15,7 +15,7 @@ $baseclass: 'page-section';
 	background-position: center;
 
 	transition: background-color $easing2 $duration-long;
-  //border-bottom: solid $rem-base / 2;
+  border-bottom: solid $rem-base * 3;
 
   &:first-child {
     margin-top: ($rem-base * 8);

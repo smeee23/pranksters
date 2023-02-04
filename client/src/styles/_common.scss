@@ -70,11 +70,11 @@ iframe {
 	@include horizontalPadding(($rem-base * 8));
 }
 
-*::-webkit-scrollbar {
+/**::-webkit-scrollbar {
 	width: 0px;
 	background: transparent;
 	background-image: url(../images/grass.jpeg); 
-}
+}*/
 
 .disabled {
 	@include disabled();

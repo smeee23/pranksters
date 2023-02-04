@@ -8,6 +8,11 @@
 	padding-bottom: $padding;
 }
 
+@mixin verticalPaddingHome($padding) {
+	padding-top: $padding;
+	padding-bottom: $rem-base * 2.9;
+}
+
 @mixin disabled() {
 	transition: opacity $duration-short $easing2;
 	opacity: 0.24;

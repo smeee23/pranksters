@@ -2,6 +2,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "ethers": "^5.4.6",
+    "fantasydata-node-client": "^1.5.3",
+    "mysportsfeeds-node": "^2.1.2",
     "node": "^16.11.1",
     "nodejs": "^0.0.0"
   },

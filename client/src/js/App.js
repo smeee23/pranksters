@@ -10,6 +10,11 @@ import { createHashHistory} from 'history'
 import routes from './routes'
 import { detectMobile } from "./actions/mobile"
 
+import { getAllPlayerDataFromSportsDataIO } from "./func/getSportsIOData";
+import { getAllPlayerDataFromSportsDataIO_2 } from "./func/priceFeeds";
+import { getData } from "./func/mySportsFeeds";
+
+
 //import { load } from "dotenv";
 
 const providerOptions = {
@@ -51,6 +56,7 @@ class App extends Component {
 	componentDidMount = async() => {
 		try {
 			window.addEventListener('resize', this.props.detectMobile);
+			await getData();
 		}
 		catch (error) {
 			// Catch any errors for any of the above operations.

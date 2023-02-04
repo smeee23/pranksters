@@ -99,11 +99,11 @@ class Header extends Component {
   generateNav = () => {
       return (
         <Fragment>
+          <NavLink className="theme--white" exact to={"/lobby"}>
+            <TextLink className="theme--white" text="Lobby"/>
+          </NavLink>
           <NavLink className="theme--white" exact to={"/howitworks"}>
             <TextLink className="theme--white" text="How it works"/>
-          </NavLink>
-          <NavLink className="theme--white" exact to={"/mint"}>
-            <TextLink className="theme--white" text="Mint"/>
           </NavLink>
           <a className="theme--white" href="https://docs.justcause.finance/" target="_blank" rel="noopener noreferrer">
             <TextLink text="Docs"/>

@@ -219,37 +219,25 @@ export const displayTVL = (id, label, tokenMap, cutOff) => {
 export const displayLogo = (acceptedTokenString) => {
   let logo = '';
   if(acceptedTokenString === 'ETH'){
-    logo = <EthLogo/>;
+    logo = <div key="eth" title="Ethereum"><EthLogo/></div>;
   }
   else if (acceptedTokenString === 'USDT'){
-    logo = <TetherLogo/>;
+    logo = <div key="tether" title="Tether"><TetherLogo/></div>;
   }
   else if (acceptedTokenString === 'USDC'){
-    logo = <UsdcLogo/>;
+    logo = <div key="usdc" title="USDC"><UsdcLogo/></div>;
   }
   else if (acceptedTokenString === 'WBTC'){
-    logo = <WbtcLogo/>;
+    logo = <div key="wbtc" title="Wrapped Bitcoin"><WbtcLogo/></div>;
   }
   else if (acceptedTokenString === 'DAI'){
-    logo = <DaiLogo/>;
-  }
-  else if (acceptedTokenString === 'AAVE'){
-    logo = <AaveLogo/>;
+    logo = <div key="dai" title="Dai"><DaiLogo/></div>;
   }
   else if(acceptedTokenString === 'WETH'){
-    logo = <WEthLogo/>;
+    logo = <div key="weth" title="Wrapped Ethereum"><WEthLogo/></div>;
   }
   else if(acceptedTokenString === 'MATIC'){
-    logo = <MaticLogo/>;
-  }
-  else if(acceptedTokenString === 'LINK'){
-    logo = <LinkLogo/>;
-  }
-  else if(acceptedTokenString === 'DPI'){
-    logo = <DpiLogo/>;
-  }
-  else{
-    logo = <Logo/>
+    logo = <div key="matic" title="Matic"><MaticLogo/></div>;
   }
   return logo
 }
